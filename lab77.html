@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Personal Portfolio</title>
+
+<style>
+
+/* DATE AND TIME */
+.datetime {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    text-align: right;
+    color: white;
+    font-size: 10px;
+    line-height: 1.5;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 9px;
+    border-radius: 5px;
+}
+
+.datetime p {
+    margin: 2px;
+}
+
+#time {
+    color: #89CFF0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* TAMBAHAN: RESPONSIVE DATE AND TIME */
+@media (max-width: 600px) {
+    .datetime {
+        top: 8px;
+        right: 10px;
+        font-size: 9px;
+    }
+}
+
+/*
+Kekalkan CSS asal portfolio awak di sini.
+Contohnya:
+.section, .dark-section, .heading,
+.card-container, .card, .experience-box,
+.project-container, .education-box,
+.interest-container, .contact-box dan footer.
+*/
+
+</style>
+</head>
+
+<body>
+
+<!-- DATE AND TIME -->
+<div class="datetime">
+    <p id="day"></p>
+    <p id="date"></p>
+    <p id="time"></p>
+</div>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section dark-section">
+
+<h2 class="heading">MY <span>SKILLS</span></h2>
+<div class="card-container">
+
+<div class="card">
+<h3>Records Management</h3>
+<p>
+Knowledge of file arrangement,
+file closure and document handling.
+</p>
+</div>
+
+<div class="card">
+<h3>Microsoft Office</h3>
+<p>
+Able to use Microsoft Word,
+Excel and PowerPoint.
+</p>
+</div>
+
+<div class="card">
+<h3>Communication</h3>
+<p>
+Able to communicate politely
+and work with other people.
+</p>
+</div>
+
+<div class="card">
+<h3>Organisation</h3>
+<p>
+Able to arrange documents
+and organise information systematically.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+
+<h2 class="heading">MY <span>EXPERIENCE</span></h2>
+
+<div class="experience-box">
+
+<h3>Industrial Training</h3>
+
+<h4>Pejabat Tanah Kluang, Johor</h4>
+
+<p class="date">27 JULY 2026</p>
+
+<ul>
+<li>Assisted in closing and organising land-related files.</li>
+<li>Recorded information from land title documents using Microsoft Excel.</li>
+<li>Prepared documents for disposal through shredding.</li>
+<li>Scanned meeting minutes and assisted in sending digital documents.</li>
+<li>Participated in departmental meetings and administrative activities.</li>
+</ul>
+
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section dark-section">
+
+<h2 class="heading">MY <span>PROJECTS</span></h2>
+
+<p class="section-intro">
+Here are some academic projects and activities
+I have worked on during my studies.
+</p>
+
+<div class="project-container">
+
+<div class="project-card">
+<div class="project-info">
+<h3>Records Management</h3>
+<p>
+Academic work related to records
+organisation and management.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-info">
+<h3>Database Project</h3>
+<p>
+Developing knowledge of database
+design and information systems.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-info">
+<h3>Academic Projects</h3>
+<p>
+Creating academic posters,
+presentations and assignments.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+
+<h2 class="heading">MY <span>EDUCATION</span></h2>
+
+<div class="education-box">
+
+<h3>Diploma in Information Management</h3>
+
+<h4>UNIVERSITI TEKNOLOGI MARA CAWANGAN JOHOR KAMPUS SEGAMAT</h4>
+
+<p class="date">2021- 2027</p>
+
+<p>
+Gaining knowledge in records management,
+information systems, reference services,
+information organisation and administration.
+</p>
+
+</div>
+</section>
+
+
+<!-- INTERESTS -->
+<section id="interests" class="section dark-section">
+
+<h2 class="heading">MY <span>INTERESTS</span></h2>
+
+<div class="interest-container">
+
+<div class="interest-card">
+<h3>Reading</h3>
+</div>
+
+<div class="interest-card">
+<h3>Photography</h3>
+</div>
+
+<div class="interest-card">
+<h3>Learning New Skills</h3>
+</div>
+
+<div class="interest-card">
+<h3>Creative Design</h3>
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2 class="heading">CONTACT <span>ME</span></h2>
+
+<div class="contact-box">
+
+<p><strong>Email:</strong>@gmail.com</p>
+
+<p><strong>Phone:</strong> +6000000</p>
+
+<p><strong>Location:</strong> Johor, Malaysia</p>
+
+<p><strong>LinkedIn:</strong> Your LinkedIn Profile</p>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+Copyright &copy; 2026 hus.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- AUTOMATIC DATE AND TIME -->
+<script>
+
+function updateDateTime() {
+
+    const now = new Date();
+
+    document.getElementById("day").textContent =
+        now.toLocaleDateString("en-MY", {
+            weekday: "long"
+        });
+
+    document.getElementById("date").textContent =
+        now.toLocaleDateString("en-MY", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+    document.getElementById("time").textContent =
+        now.toLocaleTimeString("en-MY", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
+        });
+}
+
+updateDateTime();
+
+setInterval(updateDateTime, 1000);
+
+</script>
+
+</body>
+</html>
